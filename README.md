@@ -1,3 +1,3 @@
-# primer_parcial
+# examen_final
 
-Primer parcial procesos de negocio
+Examen final procesos de negocio
