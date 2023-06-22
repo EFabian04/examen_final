@@ -1,7 +1,7 @@
-package com.segundo_parcial.producto.repository;
+package com.examen_final.producto.repository;
 
+import com.examen_final.producto.models.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.segundo_parcial.producto.models.Product;
 
 public interface ProductRepository extends JpaRepository<Product, Long> {
 

@@ -1,4 +1,4 @@
-package com.segundo_parcial.producto;
+package com.examen_final.producto;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

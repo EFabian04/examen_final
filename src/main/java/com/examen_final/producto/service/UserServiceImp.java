@@ -1,12 +1,12 @@
-package com.segundo_parcial.producto.service;
+package com.examen_final.producto.service;
 
-import com.segundo_parcial.producto.models.User;
-import com.segundo_parcial.producto.repository.UserRepository;
-import com.segundo_parcial.producto.utils.JWTUtil;
+import com.examen_final.producto.models.User;
+import com.examen_final.producto.repository.UserRepository;
+import com.examen_final.producto.utils.Constants;
+import com.examen_final.producto.utils.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import static com.segundo_parcial.producto.utils.Constants.USER_NOT_FOUND;
 
 import java.util.List;
 import java.util.Optional;
@@ -17,6 +17,8 @@ public class UserServiceImp implements UserService {
     private UserRepository userRepository;
     @Autowired
     private JWTUtil jwtUtil;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     public User getUserById(Long id) {
         return userRepository.findById(id).get();
@@ -28,7 +30,11 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
-    public User createUser(User user) {return userRepository.save(user); }
+    public User createUser(User user) {
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        return userRepository.save(user);
+
+    }
 
     @Override
     public User updateUser(Long id, User user) {
@@ -37,15 +43,18 @@ public class UserServiceImp implements UserService {
         userBD.setLastName(user.getLastName());
         userBD.setAddress(user.getAddress());
         userBD.setBirthday(user.getBirthday());
+        userBD.setPassword(passwordEncoder.encode(user.getPassword()));
         return userRepository.save(userBD);
     }
 
     @Override
     public String login(User user) {
-        Optional<User> userBd = userRepository.findByEmailAndPassword(user.getEmail()
-                , user.getPassword());
+        Optional<User> userBd = userRepository.findByEmail(user.getEmail());
         if (userBd.isEmpty()) {
-            throw new RuntimeException(USER_NOT_FOUND);
+            throw new RuntimeException(Constants.USER_NOT_FOUND);
+        }
+        if(!passwordEncoder.matches(user.getPassword(),userBd.get().getPassword())){
+            throw new RuntimeException(Constants.PASSWORD_INVALID);
         }
         return jwtUtil.create(String.valueOf(userBd.get().getId()),
                 String.valueOf(userBd.get().getEmail()));

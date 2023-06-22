@@ -1,10 +1,9 @@
-package com.segundo_parcial.producto.service;
+package com.examen_final.producto.service;
 
-import com.segundo_parcial.producto.models.ApiProduct;
-import com.segundo_parcial.producto.repository.ProductRepository;
-import com.segundo_parcial.producto.service.ProductService;
+import com.examen_final.producto.models.ApiProduct;
+import com.examen_final.producto.models.Product;
+import com.examen_final.producto.repository.ProductRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.segundo_parcial.producto.models.Product;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;

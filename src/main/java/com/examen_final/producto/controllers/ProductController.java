@@ -1,17 +1,16 @@
-package com.segundo_parcial.producto.controllers;
+package com.examen_final.producto.controllers;
 
-import com.segundo_parcial.producto.models.Product;
-import com.segundo_parcial.producto.service.ProductServiceImp;
-import com.segundo_parcial.producto.utils.ApiResponse;
-import com.segundo_parcial.producto.utils.Constants;
-import com.segundo_parcial.producto.utils.JWTUtil;
+import com.examen_final.producto.utils.ApiResponse;
+import com.examen_final.producto.utils.Constants;
+import com.examen_final.producto.utils.JWTUtil;
+import com.examen_final.producto.models.Product;
+import com.examen_final.producto.service.ProductServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.util.HashMap;
+
 import java.util.List;
-import java.util.Map;
 
 @RestController
 

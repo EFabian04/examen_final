@@ -1,6 +1,6 @@
-package com.segundo_parcial.producto.service;
+package com.examen_final.producto.service;
 
-import com.segundo_parcial.producto.models.Product;
+import com.examen_final.producto.models.Product;
 
 import java.util.List;
 

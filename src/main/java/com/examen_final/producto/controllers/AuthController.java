@@ -1,19 +1,17 @@
-package com.segundo_parcial.producto.controllers;
+package com.examen_final.producto.controllers;
 
-import com.segundo_parcial.producto.models.User;
-import com.segundo_parcial.producto.service.UserService;
-import com.segundo_parcial.producto.utils.ApiResponse;
-import com.segundo_parcial.producto.utils.Constants;
+import com.examen_final.producto.models.User;
+import com.examen_final.producto.service.UserService;
+import com.examen_final.producto.utils.ApiResponse;
+import com.examen_final.producto.utils.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
+@CrossOrigin()
 public class AuthController {
     @Autowired
     private UserService userService;

@@ -1,7 +1,7 @@
-package com.segundo_parcial.producto.service;
+package com.examen_final.producto.service;
 
-import com.segundo_parcial.producto.models.Product;
-import com.segundo_parcial.producto.repository.ProductRepository;
+import com.examen_final.producto.models.Product;
+import com.examen_final.producto.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

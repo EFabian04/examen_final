@@ -1,7 +1,6 @@
-package com.segundo_parcial.producto.service;
+package com.examen_final.producto.service;
 
-import com.segundo_parcial.producto.models.User;
-
+import com.examen_final.producto.models.User;
 import java.util.List;
 
 public interface UserService {

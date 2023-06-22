@@ -1,4 +1,4 @@
-package com.segundo_parcial.producto.utils;
+package com.examen_final.producto.utils;
 
 public class Constants {
     private Constants() {
@@ -19,5 +19,5 @@ public class Constants {
     //Autenticacion
     public static final String USER_LOGIN = "Usuario logeado!";
     public static final String USER_NOT_FOUND = "Usuario no encontrado!";
-
+    public static final String PASSWORD_INVALID = "Contraseña incorrecta!";
 }

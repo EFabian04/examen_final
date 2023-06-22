@@ -1,10 +1,10 @@
-package com.segundo_parcial.producto.controllers;
+package com.examen_final.producto.controllers;
 
+import com.examen_final.producto.models.Product;
+import com.examen_final.producto.utils.Constants;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.segundo_parcial.producto.models.ApiProduct;
-import com.segundo_parcial.producto.models.Product;
-import com.segundo_parcial.producto.service.RestProductService;
-import com.segundo_parcial.producto.utils.Constants;
+import com.examen_final.producto.models.ApiProduct;
+import com.examen_final.producto.service.RestProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

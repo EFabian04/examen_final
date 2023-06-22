@@ -1,4 +1,4 @@
-package com.segundo_parcial.producto.utils;
+package com.examen_final.producto.utils;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.segundo_parcial.producto.config;
+package com.examen_final.producto.config;
 
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
